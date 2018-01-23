@@ -1,0 +1,14 @@
+{
+  "name": "callbag-pipe",
+  "version": "1.0.0",
+  "description": "Utility function for plugging callbags together in chain",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "staltz.com",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
