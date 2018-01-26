@@ -2,6 +2,10 @@
   "name": "callbag-pipe",
   "version": "1.0.0",
   "description": "Utility function for plugging callbags together in chain",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/callbag-pipe.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
