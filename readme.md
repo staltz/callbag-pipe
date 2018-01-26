@@ -20,14 +20,14 @@ const source = pipe(
   take(10)
 );
 
-source(0, observe(x => console.log(x)); // X2,Y0
-                                        // X3,Y0
-                                        // X4,Y0
-                                        // X5,Y0
-                                        // X6,Y0
-                                        // X6,Y1
-                                        // X7,Y1
-                                        // X8,Y1
-                                        // X9,Y1
-                                        // X9,Y2
+source(0, observe(x => console.log(x))); // X2,Y0
+                                         // X3,Y0
+                                         // X4,Y0
+                                         // X5,Y0
+                                         // X6,Y0
+                                         // X6,Y1
+                                         // X7,Y1
+                                         // X8,Y1
+                                         // X9,Y1
+                                         // X9,Y2
 ```
