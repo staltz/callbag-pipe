@@ -12,8 +12,14 @@
   },
   "author": "staltz.com",
   "license": "MIT",
-  "keywords": ["callbag"],
+  "keywords": [
+    "callbag"
+  ],
   "devDependencies": {
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "callbag-from-iter": "1.0.x",
+    "callbag-map": "1.0.x",
+    "callbag-filter": "1.0.x",
+    "callbag-iterate": "1.0.x"
   }
 }

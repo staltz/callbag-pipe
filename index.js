@@ -1,13 +1,6 @@
 function pipe(...cbs) {
-  let cb,
-    res = false,
-    i = 0,
-    n = cbs.length;
-  for (; i < n; i++) {
-    cb = cbs[i];
-    if (res) res = cb(res);
-    else res = cb;
-  }
+  let res = cbs[0];
+  for (let i = 1, n = cbs.length; i < n; i++) res = cbs[i](res);
   return res;
 }
 

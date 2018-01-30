@@ -62,3 +62,38 @@ pipe(
 // X9,Y1
 // X9,Y2
 ```
+
+## Nesting
+
+To use pipe inside another pipe, you need to give the inner pipe an argument, e.g. `s => pipe(s, ...`:
+
+```js
+const interval = require('callbag-interval');
+const observe = require('callbag-observe');
+const combine = require('callbag-combine');
+const pipe = require('callbag-pipe');
+const take = require('callbag-take');
+const map = require('callbag-map');
+
+pipe(
+  combine(interval(100), interval(350)),
+  s => pipe(s,
+    map(([x, y]) => `X${x},Y${y}`),
+    take(10)
+  ),
+  observe(x => console.log(x))
+);
+```
+
+This means you can use pipe to create a new operator:
+
+```js
+const mapThenTake = (f, amount) =>
+  s => pipe(s, map(f), take(amount));
+
+pipe(
+  combine(interval(100), interval(350)),
+  mapThenTake(([x, y]) => `X${x},Y${y}`, 10),
+  observe(x => console.log(x))
+);
+```
