@@ -2,8 +2,8 @@ const test = require('tape');
 const fromIter = require('callbag-from-iter');
 const map = require('callbag-map');
 const filter = require('callbag-filter');
-const iterate = require('callbag-iterate');
-const pipe = require('./index');
+const forEach = require('callbag-for-each');
+const pipe = require('./readme');
 
 test('it calls first-order functions in sequence LTR', (t) => {
   t.plan(1);
@@ -68,7 +68,7 @@ test('it works with common callbag utilities', (t) => {
     fromIter([10, 20, 30, 40]),
     map(x => x / 10),
     filter(x => x % 2),
-    iterate(x => {
+    forEach(x => {
       t.equals(x, expected.shift());
       if (expected.length === 0) {
         t.end();
@@ -86,7 +86,7 @@ test('it can be nested with callbag utilities', (t) => {
       map(x => x / 10),
       filter(x => x % 2)
     ),
-    iterate(x => {
+    forEach(x => {
       t.equals(x, expected.shift());
       if (expected.length === 0) {
         t.end();

@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/staltz/callbag-pipe.git"
   },
-  "main": "index.js",
+  "main": "readme.js",
   "scripts": {
     "test": "tape test.js"
   },
@@ -20,6 +20,6 @@
     "callbag-from-iter": "1.0.x",
     "callbag-map": "1.0.x",
     "callbag-filter": "1.0.x",
-    "callbag-iterate": "1.0.x"
+    "callbag-for-each": "1.0.x"
   }
 }
