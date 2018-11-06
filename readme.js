@@ -3,9 +3,15 @@
  * ------------
  *
  * Utility function for plugging callbags together in chain. This utility
- * actually doesn't rely on Callbag specifics, and is basically the same as
- * Ramda's `pipe` or lodash's `flow`. Anyway, this exists just to play nicely
- * with the ecosystem, and to facilitate the import of the function.
+ * actually doesn't rely on Callbag specifics, and is really similar to
+ * Ramda's `pipe` or lodash's `flow`.
+ * 
+ * Implementation of `callbag-pipe` using `R.pipe` could look like this:
+ *
+ * const pipe = (source, ...cbs) => R.pipe(...cbs)(source)
+ * 
+ * This exists to play nicely with the ecosystem,
+ * and to facilitate the import of the function.
  *
  * `npm install callbag-pipe`
  *
