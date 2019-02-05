@@ -7,6 +7,7 @@
     "url": "git+https://github.com/staltz/callbag-pipe.git"
   },
   "main": "readme.js",
+  "types": "types.d.ts",
   "scripts": {
     "test": "tape test.js"
   },
